@@ -1,0 +1,18 @@
+{
+  "site": {
+    "title": "Microsmith",
+    "description": "Blog Boilerplate",
+    "generator": "microsmith",
+    "url": "https://your-website.com/",
+    "logo": "https://loremflickr.com/320/240/blog"
+  },
+  "author": {
+    "name": "Your Name",
+    "email": "your@email.com",
+    "github": "your-github",
+    "twitter": "your-twitter",
+    "linkedin": "your-linkedin",
+    "bio": "I've started Microsmith",
+    "micro": "your-micro"
+  }
+}
