@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  max-width: 670px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 2%;
+  padding: 2vw;
+  font-family: "Avenir Next", "Segoe UI", "Verdana"; }
+
+.vspace, section.author, main, .list, .post {
+  margin-top: 1rem;
+  margin-bottom: 1.3rem; }
+
+h2 {
+  font-size: 1.1rem; }
+
+h3 {
+  font-size: 1rem; }
+
+h1,
+h1 a {
+  color: #ff9502;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-top: 0; }
+  h1:link, h1:visited,
+  h1 a:link,
+  h1 a:visited {
+    color: #ff9502; }
+
+h1 a:link,
+h1 a:visited, h2 a:link,
+h2 a:visited, h3 a:link,
+h3 a:visited, h4 a:link,
+h4 a:visited, h5 a:link,
+h5 a:visited, h6 a:link,
+h6 a:visited, .post footer a:link,
+.post footer a:visited {
+  text-decoration: none; }
+
+h1 a:hover,
+h1 a:active,
+h1 a:focus, h2 a:hover,
+h2 a:active,
+h2 a:focus, h3 a:hover,
+h3 a:active,
+h3 a:focus, h4 a:hover,
+h4 a:active,
+h4 a:focus, h5 a:hover,
+h5 a:active,
+h5 a:focus, h6 a:hover,
+h6 a:active,
+h6 a:focus, .post footer a:hover,
+.post footer a:active,
+.post footer a:focus {
+  text-decoration: underline; }
+
+section.author {
+  color: #317293;
+  background-color: #dbeef7;
+  padding: 1rem;
+  border: 1px solid #bde9f1;
+  border-radius: 0.25rem; }
+  section.author > :first-child {
+    margin-top: 0; }
+  section.author > :last-child {
+    margin-bottom: 0; }
+  section.author .social,
+  section.author .social > li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+  section.author a:link,
+  section.author a:visited {
+    color: #347bb9;
+    text-decoration: none; }
+  section.author a:hover,
+  section.author a:active,
+  section.author a:focus {
+    color: #23537d;
+    text-decoration: underline; }
+
+a:link, a:visited {
+  color: #347bb9; }
+
+a:hover, a:active, a:focus {
+  color: #23537d; }
+
+body > footer {
+  padding: 8% 0;
+  padding: 8vh 0;
+  text-align: center; }
+
+.list {
+  padding: 0 3.38rem;
+  list-style-type: none;
+  line-height: 1.5; }
+
+.post {
+  list-style-type: none;
+  padding: 0; }
+  .post .title, .post p {
+    padding: 0.25rem 0 0 0;
+    margin: 0 0 0.7rem 0; }
+  .post .title {
+    margin-bottom: 0.25rem; }
+    .post .title a:link, .post .title a:visited {
+      color: #333; }
+  .post img, .post .image {
+    max-width: 100%;
+    max-height: 500px;
+    height: auto;
+    width: auto;
+    display: block;
+    clear: both;
+    border-radius: 0.2rem; }
+    .post img:not(:first-child), .post .image:not(:first-child) {
+      margin-top: 0.25rem; }
+  .post footer > * {
+    margin-right: 0.7em; }
+
+small,
+.small {
+  font-size: 0.7em; }
+
+.muted {
+  color: gray; }

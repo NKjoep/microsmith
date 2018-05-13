@@ -64,7 +64,7 @@ const websiteOptions = { metadata: require('../microsmith.config.json') };
     .metadata(websiteOptions.metadata)
     .source(sourcePath)
     .destination(buildDistPath)
-    .clean(false)
+    .clean(true)
     .use(mp_collections({
       'posts': {
         pattern: ['*.md', '!index*'],
