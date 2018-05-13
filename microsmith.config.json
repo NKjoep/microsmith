@@ -4,7 +4,7 @@
     "description": "Blog Boilerplate",
     "generator": "microsmith",
     "url": "https://your-website.com/",
-    "logo": "https://loremflickr.com/320/240/blog"
+    "logo": "https://dummyimage.com/37x22/ff9502/000000&text=%20MS"
   },
   "author": {
     "name": "Your Name",
@@ -12,7 +12,7 @@
     "github": "your-github",
     "twitter": "your-twitter",
     "linkedin": "your-linkedin",
-    "bio": "I've started Microsmith",
+    "bio": "I've started a blog with Microsmith",
     "micro": "your-micro"
   }
 }

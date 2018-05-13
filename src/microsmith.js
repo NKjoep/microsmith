@@ -1,8 +1,8 @@
 const compileSass = require('./lib/sass-compile');
-// const copyFiles = require('./lib/copy-files');
+const copyFiles = require('./lib/copy-files');
 
 const stylesSource = './assets/styles.scss';
-const stylesDestination = './assets/styles.css';
+const stylesDestination = './dist/styles.css';
 
 const sourcePath = '../posts';
 const buildDistPath = '../dist';
@@ -64,7 +64,7 @@ const websiteOptions = { metadata: require('../microsmith.config.json') };
     .metadata(websiteOptions.metadata)
     .source(sourcePath)
     .destination(buildDistPath)
-    .clean(true)
+    .clean(false)
     .use(mp_collections({
       'posts': {
         pattern: ['*.md', '!index*'],

@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>{{ title }} | {{ site.title }}</title>
-  <link rel="alternate" type="application/rss+xml" title="RSS Feed | {{ site.title }}" href="/dist/feed.xml">
-  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed | {{ site.title }}" href="/feed.xml">
+  <link rel="stylesheet" href="/styles.css">
   <link href="https://micro.blog/{{author.micro}}" rel="me">
 <body>
   <h1>
@@ -13,49 +13,61 @@
     <a href="/">{{ site.title }} - {{ site.description }}</a>
   </h1>
 
+  <section class="author">
+    <p>
+      <img src="http://www.gravatar.com/avatar/1cc444874aa9e2a9274a671ddda2b2de?s=150" style="height: 1em; vertical-align: middle;" alt=" ">
+      <strong>{{author.name}}</strong> &ndash; {{author.bio}}
+    </p>
+    <ul class="social">
+        <li>
+          <a href="https://twitter.com/{{author.twitter}}" title="Go to: twitter/@{{ author.twitter }}">
+            {{ author.twitter }}
+          </a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/in/{{author.linkedin}}" title="Go to: linkedin/@{{ author.linkedin }}">
+              {{ author.linkedin }}
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/{{author.github}}" title="Go to: github/{{ author.github }}">
+              {{ author.github }}
+            </a>
+        </li>
+        <li>
+            <a href="/feed.xml" title="Subscribe to this website's RSS feed">RSS Feed</a>
+        </li>
+      </ul>
+  </section>
+
   <main>
-    {{{contents}}}
+    <div class="vspace">
+      {{{contents}}}
+    </div>
   </main>
 
   {{#if isIndex}}
-  <ul>
+  <ul class="list">
     {{#each posts}}
-    <li>
-        <h3><a href="/{{path}}">{{title}}</a></h3>
-        {{{description}}}
-
+    <li class="post">
+        <h3 class="title"><a href="/{{path}}">{{title}}</a></h3>
+        {{#if description}}<p>{{{description}}}</p>{{/if}}
         {{{contents}}}
-
-        <footer>
+        <footer class="small muted">
           <time datetime="{{#datefn date}}{{/datefn}}" title="{{#datefn date 'YYYY MMM DD, HH:mm'}}{{/datefn}}">
-            {{#datefn date 'MMM DDD YYYY / HH:mm'}}{{/datefn}}
+            {{#datefn date 'H:mm a'}}{{/datefn}}
           </time>
+          <a href="/{{path}}">permalink</a>
         </footer>
     </li>
     {{/each}}
   </ul>
   {{/if}}
 
-  <hr>
-  <footer>
+  <footer class="small muted">
     <p>
-      <img src="http://www.gravatar.com/avatar/1cc444874aa9e2a9274a671ddda2b2de?s=150" style="height: 1em; vertical-align: middle;" alt=" ">
-      {{author.name}}
-      &copy; {{ site.copyrightYear }}
-      - {{author.bio}}
+      {{author.name}} &copy; {{ site.copyrightYear }}
     </p>
-    <ul>
-        <li><a href="https://twitter.com/{{author.twitter}}" title="Go to: twitter/@{{ author.twitter }}">
-          {{ author.twitter }}</a>
-        </li>
-        <li><a href="https://www.linkedin.com/in/{{author.linkedin}}" title="Go to: linkedin/@{{ author.linkedin }}">
-          {{ author.linkedin }}</a>
-        </li>
-        <li><a href="https://github.com/{{author.github}}" title="Go to: github/{{ author.github }}">
-          {{ author.github }}</a>
-        </li>
-        <li><a href="/feed.xml" title="Subscribe to this website's RSS feed">RSS Feed</a></li>
-      </ul>
   </footer>
 </body>
 </html>
