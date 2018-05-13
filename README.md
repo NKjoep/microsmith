@@ -22,3 +22,22 @@ From the root folder of the project: `npm install`
 **Run it**
 
 `npm start`
+
+**Write some posts**
+
+Check the `posts/` folder and add a new markdown file there.
+Be sure to add the required values for _title_, _description_, _layout_ and _date_. The order doesn't matter.
+
+```md
+---
+title: A New Post is Born
+description: How I ended up micro-blogging
+date: 2018-05-13T17:00:00Z
+layout: default.html
+---
+
+The full content here lorem ipsum...
+
+```
+
+The final website will be available in the `dist/` folder.
